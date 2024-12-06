@@ -1,4 +1,4 @@
-//Даден е код на модифициран програмски јазик каде функциите се претставени со отворен
+package StackAndQueue;//Даден е код на модифициран програмски јазик каде функциите се претставени со отворен
 //и затворен таг ("imeFunkcija" и "endimeFunkcija"). Ваша задача е да дефинирате дали даден
 //програмски код е валиден.
 //Пример валиден код:
@@ -39,7 +39,7 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class Exercise8{
+public class Exercise4 {
     public void funkcija(LinkedList<String> glavenstek){
         LinkedList<String> bezend = new LinkedList<>();
         LinkedList<String> soend= new LinkedList<>();
@@ -93,7 +93,7 @@ public class Exercise8{
                 glavenstek.push(str);
             }
         }
-        Exercise8 result = new Exercise8();
+        Exercise4 result = new Exercise4();
         result.funkcija(glavenstek);
 
     }

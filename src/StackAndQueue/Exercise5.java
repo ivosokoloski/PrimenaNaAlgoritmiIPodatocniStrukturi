@@ -1,3 +1,5 @@
+package StackAndQueue;
+
 import java.util.NoSuchElementException;
 
 //
@@ -8,11 +10,11 @@ import java.util.NoSuchElementException;
 //кој нема да биде опслужен и колку студенти што чекале во
 //редицата за тој ден не се опслужени.
 //
-public class Exercise10 {
-    public void studentikoisefrakja(ArrayQueue<Student> studenti){
+public class Exercise5 {
+    public void studentikoisefrakja(ArrayQueue<Students> studenti){
         int min = 180;
         for (int i=0;i<100;i++){
-            Student s=studenti.peek();
+            Students s=studenti.peek();
             if(min-s.minuti>0){
                 min-=s.minuti;
                 studenti.dequeue();
@@ -22,16 +24,16 @@ public class Exercise10 {
         }
     }
     public static void main(String[] args){
-        ArrayQueue<Student> stuednti= new ArrayQueue<>(100);
-        stuednti.enqueue(new Student(233542,40));
-        stuednti.enqueue(new Student(269622,40));
-        stuednti.enqueue(new Student(245822,10));
-        stuednti.enqueue(new Student(224822,20));
-        stuednti.enqueue(new Student(299922,30));
-        stuednti.enqueue(new Student(236662,50));
-        stuednti.enqueue(new Student(222222,40));
-        stuednti.enqueue(new Student(211122,40));
-        Exercise10 result= new Exercise10();
+        ArrayQueue<Students> stuednti= new ArrayQueue<>(100);
+        stuednti.enqueue(new Students(233542,40));
+        stuednti.enqueue(new Students(269622,40));
+        stuednti.enqueue(new Students(245822,10));
+        stuednti.enqueue(new Students(224822,20));
+        stuednti.enqueue(new Students(299922,30));
+        stuednti.enqueue(new Students(236662,50));
+        stuednti.enqueue(new Students(222222,40));
+        stuednti.enqueue(new Students(211122,40));
+        Exercise5 result= new Exercise5();
         result.studentikoisefrakja(stuednti);
         while (!stuednti.isEmpty()){
             System.out.println(stuednti.dequeue());
@@ -100,11 +102,11 @@ class ArrayQueue<E> {
             throw new NoSuchElementException();
     }
 }
-class Student{
+class Students{
     int index;
     int minuti;
 
-    public Student(int index, int minuti) {
+    public Students(int index, int minuti) {
         this.index = index;
         this.minuti = minuti;
     }

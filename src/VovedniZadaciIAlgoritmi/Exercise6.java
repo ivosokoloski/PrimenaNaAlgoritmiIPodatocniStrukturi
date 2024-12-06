@@ -1,4 +1,4 @@
-//Дадени се Н цифри. Да се напише алгоритам кој ќе го даде најголемиот можен број составен од тие цифри.
+package VovedniZadaciIAlgoritmi;//Дадени се Н цифри. Да се напише алгоритам кој ќе го даде најголемиот можен број составен од тие цифри.
 //Влез: Првиот број од влезот е бројот на цифри N, а потоа во следниот ред се цифрите.
 //Излез: Најголемиот број кој може да се состави од тие цифри
 //We are given N digits. Write an algorithm that composes the largest possible number from those digits.
@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class Exercise7{
+public class Exercise6 {
 
     public void NajgolemBroj(int [] numbers){
         for (int i=0;i<numbers.length-1;i++){
@@ -31,7 +31,7 @@ public class Exercise7{
         for (int i=0;i<n;i++){
             numbers[i]=input.nextInt();
         }
-        Exercise7 result= new Exercise7();
+        Exercise6 result= new Exercise6();
         result.NajgolemBroj(numbers);
     }
 }

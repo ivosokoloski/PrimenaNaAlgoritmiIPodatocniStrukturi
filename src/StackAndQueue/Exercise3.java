@@ -1,3 +1,5 @@
+package StackAndQueue;
+
 import java.util.NoSuchElementException;
 import java.util.Stack;
 //Да се провери коректноста на заградите во еден израз.
@@ -9,7 +11,7 @@ import java.util.Stack;
 //• Примери на изрази со некоректни загради:
 //s(s – a)(s – b (s – c)
 
-public class Exercise5 {
+public class Exercise3 {
     public boolean funkcija(String str){
         ArrayStack<Character> stek=new ArrayStack<>(100);
         for (int i=0;i<str.length();i++){
@@ -30,7 +32,7 @@ public class Exercise5 {
     }
     public static void main(String[] args) {
         String str= "s(s – a)(s – b (s – c)";
-        Exercise5 result = new Exercise5();
+        Exercise3 result = new Exercise3();
 
         System.out.println(result.funkcija(str));
     }
